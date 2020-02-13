@@ -31,13 +31,43 @@ footer {
   flex: 1;
 }
 
-@media only screen and (max-width: 600px) {
+/* 🔑🔒 Here are our media queries which define 
+the styles based on the screen size */
+
+@media only screen and (max-width: 800px) {
   section {
     padding: 5%;
     width: 100%;
+    background-color: red;
   }
 
   form {
     flex-direction: column;
   }
 }
+
+@media only screen and (max-width: 700px) {
+  section {
+    padding: 5%;
+    width: 100%;
+    background-color: white;
+  }
+
+  form {
+    flex-direction: column;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  section {
+    padding: 5%;
+    width: 100%;
+    background-color: blue;
+  }
+
+  form {
+    flex-direction: column;
+  }
+}
+

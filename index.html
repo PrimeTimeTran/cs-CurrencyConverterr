@@ -14,17 +14,17 @@
   <section class="d-flex flex-column align-items-center justify-content-center">
     <h3 class="align-self-start" id="prompt">The World's Trusted Currency Authority</h3>
     <div class="d-flex flex-column align-items-center justify-content-center input-form">
-      <form>
-        <input type="number" id="amount" />
-        <select id="from">
-          <option value="USD">USD</option>
-          <option value="VND">VND</option>
-        </select>
-        <select id="to">
-          <option value="VND">VND</option>
-        </select>
-        <button type="submit"><i class="fa fa-chevron-right fa-3x"></i></button>
-      </form>
+      <input id="amount" />
+      <p>From</p>
+      <select id="from">
+        <option value="USD">USD</option>
+        <option value="VND">VND</option>
+      </select>
+      <p>To:</p>
+      <select id="to">
+        <option value="VND">VND</option>
+      </select>
+      <button><i class="fa fa-chevron-right fa-3x"></i></button>
       <div>
         <h5 id="start-amount" class="text-center">1 USD =</h5>
         <h1 id="converted-amount">0.916394 EUR</h1>
@@ -37,7 +37,10 @@
     Built with ❤️ <a class="pl-1" target="_blank" href="https://www.github.com/primetimetran">PrimeTimeTran</a>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- 🔑🔒 Here we need to uncomment 
+    to import the JS into our HTML -->
+
+  <!-- <script src="script.js"></script> -->
 </body>
 
 </html>
