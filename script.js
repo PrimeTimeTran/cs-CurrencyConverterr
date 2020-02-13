@@ -9,19 +9,17 @@ function formatCurrency(currency, value) {
 function getFromTo() {
   const from = document.getElementById("from").value;
   const to = document.getElementById("to").value;
-  return [from, to]
+  return [from, to];
 }
 
 function updateTitle(converted, value, from, to) {
-  const prompt = `${formatCurrency(
-    from,
-    value
-  )} ${from} to ${to} = ${converted} ${to}`;
+  const fromAmount = formatCurrency(from, value);
+  const prompt = `${fromAmount} ${from} to ${to} = ${converted} ${to}`;
   document.getElementById("prompt").innerHTML = prompt;
 }
 
 function convertCurrency() {
-  const [from, to] = getFromTo()
+  const [from, to] = getFromTo();
   const amount = document.getElementById("amount").value;
   const initialAmountAndCurrency = `${amount} ${from} =`;
 
