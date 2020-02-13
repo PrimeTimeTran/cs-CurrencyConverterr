@@ -32,10 +32,8 @@ the styles based on the screen size */
   }
 }
 
-
 @media only screen and (max-width: 600px) {
   section {
     background-color: blue;
   }
 }
-
