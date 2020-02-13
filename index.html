@@ -4,24 +4,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 🔑🔒 Lets grab dependencies from public CDNs -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+  <!-- 🔑🔒 Custom CSS -->
   <link rel="stylesheet" href="style.css">
-  <title>Currency Converter</title>
+  
+  <!-- 🔑🔒 Tab icon & title in browser -->
+  <link rel="icon" href="./logo.png">
+  <title>World Famous Currency Converter</title>
+  
+  <!-- 🔑🔒 Define preview image, title, description, and more. -->
+  <meta property="og:title" content="International Currency Converter" />
+  <meta property="og:description"
+    content="Convert any currency to any other quickly and easily with our full stack currency converter" />
+  <meta property="og:type" content="video.movie" />
+  <meta property="og:url" content="https://www.tradeexchange.ae/wp-content/uploads/2020/01/%D8%AB%D8%AB.jpg" />
+  <meta property="og:image" content="https://www.tradeexchange.ae/wp-content/uploads/2020/01/%D8%AB%D8%AB.jpg" />
+
+
 </head>
 
 <body>
   <section class="d-flex flex-column align-items-center justify-content-center">
     <h3 class="align-self-start" id="prompt">The World's Trusted Currency Authority</h3>
-    <div class="d-flex flex-column align-items-center input-form">
+    <div class="d-flex flex-row align-items-center input-form">
       <input id="amount" />
       <p class="text-primary font-weight-bold">From:</p>
-      <select id="from">
+      <select id="from" class="btn-primary btn-lg btn-lg">
         <option value="USD">USD</option>
         <option value="VND">VND</option>
       </select>
       <p class="text-primary font-weight-bold">To:</p>
-      <select id="to">
+      <select id="to" class="btn-primary btn-lg btn-lg">
         <option value="VND">VND</option>
       </select>
       <button class="btn btn-primary btn-lg btn-block m-5"><i class="fa fa-chevron-right fa-3x"></i></button>
@@ -39,7 +56,6 @@
 
   <!-- 🔑🔒 Here we need to uncomment 
     to import the JS into our HTML -->
-
   <!-- <script src="script.js"></script> -->
 </body>
 
