@@ -6,8 +6,13 @@ function formatCurrency(currency, value) {
   return formatter.format(value);
 }
 
+function getFromTo() {
+  const from = document.getElementById("from").value;
+  const to = document.getElementById("to").value;
+  return [from, to]
+}
+
 function updateTitle(converted, value, from, to) {
-  "100,000 VND to USD = 4.30314 US Dollars";
   const prompt = `${formatCurrency(
     from,
     value
@@ -16,8 +21,7 @@ function updateTitle(converted, value, from, to) {
 }
 
 function convertCurrency() {
-  const from = document.getElementById("from").value;
-  const to = document.getElementById("to").value;
+  const [from, to] = getFromTo()
   const amount = document.getElementById("amount").value;
   const initialAmountAndCurrency = `${amount} ${from} =`;
 
@@ -36,8 +40,7 @@ function convertCurrency() {
 }
 
 function reverse() {
-  const from = document.getElementById("from").value;
-  const to = document.getElementById("to").value;
+  const [from, to] = getFromTo();
 
   document.getElementById("from").value = to;
   document.getElementById("to").value = from;
