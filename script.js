@@ -16,4 +16,9 @@ function convertCurrency() {
     document.getElementById("converted-amount").innerHTML = formatCurrency(to, value);
     document.getElementById('start-amount').innerHTML = `${amount} ${from} =`
   }
+  if (from === "VND" && to === 'USD') {
+    const value = amount / 23000
+    document.getElementById("converted-amount").innerHTML = formatCurrency(to, value);
+    document.getElementById('start-amount').innerHTML = `${amount} ${from} =`
+  }
 }
