@@ -13,18 +13,18 @@
 <body>
   <section class="d-flex flex-column align-items-center justify-content-center">
     <h3 class="align-self-start" id="prompt">The World's Trusted Currency Authority</h3>
-    <div class="d-flex flex-column align-items-center justify-content-center input-form">
+    <div class="d-flex flex-column align-items-center input-form">
       <input id="amount" />
-      <p>From</p>
+      <p class="text-primary font-weight-bold">From:</p>
       <select id="from">
         <option value="USD">USD</option>
         <option value="VND">VND</option>
       </select>
-      <p>To:</p>
+      <p class="text-primary font-weight-bold">To:</p>
       <select id="to">
         <option value="VND">VND</option>
       </select>
-      <button><i class="fa fa-chevron-right fa-3x"></i></button>
+      <button class="btn btn-primary btn-lg btn-block m-5"><i class="fa fa-chevron-right fa-3x"></i></button>
       <div>
         <h5 id="start-amount" class="text-center">1 USD =</h5>
         <h1 id="converted-amount">0.916394 EUR</h1>
