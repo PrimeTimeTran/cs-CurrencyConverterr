@@ -1,0 +1,43 @@
+body {
+  margin: 0px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+section {
+  height: 95vh;
+  padding: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-form {
+  width: 100%;
+  padding: 5%;
+  border: 1px solid red;
+  border-radius: 25px;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  flex: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  section {
+    padding: 5%;
+    width: 100%;
+  }
+
+  form {
+    flex-direction: column;
+  }
+}
