@@ -7,29 +7,40 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
-  <title>Currency Converter</title>
+  <link rel="icon" href="./logo.png">
+
+  <!-- 🔑🔒 Here were defining properties related to sharing on social media. -->
+
+  <title>World Famous Currency Converter</title>
+  <meta property="og:title" content="International Currency Converter" />
+  <meta property="og:description"
+    content="Convert any currency to any other quickly and easily with our full stack currency convertter" />
+  <meta property="og:type" content="video.movie" />
+  <meta property="og:url" content="https://www.tradeexchange.ae/wp-content/uploads/2020/01/%D8%AB%D8%AB.jpg" />
+  <meta property="og:image" content="https://www.tradeexchange.ae/wp-content/uploads/2020/01/%D8%AB%D8%AB.jpg" />
 </head>
 
 <body>
   <section class="d-flex flex-column align-items-center justify-content-center">
     <h3 class="align-self-start" id="prompt">The World's Trusted Currency Authority</h3>
-    <div class="d-flex flex-column align-items-center input-form">
+    <div class="d-flex flex-row align-items-center input-form">
       <input autofocus type="number" id="amount" />
       <p class="text-primary font-weight-bold">From:</p>
-      <select id="from">
+      <select id="from" class="btn-primary btn-lg btn-lg">
         <option value="USD">USD</option>
         <option value="VND">VND</option>
       </select>
       <p class="text-primary font-weight-bold">To:</p>
-      <select id="to">
+      <select id="to" class="btn-primary btn-lg btn-lg">
         <option value="VND">VND</option>
         <option value="USD">USD</option>
       </select>
-      <button class="btn btn-primary btn-lg btn-block m-5" onclick="convertCurrency()"><i class="fa fa-chevron-right fa-3x"></i></button>
-      <div>
-        <h5 id="start-amount" class="text-center">1 USD =</h5>
-        <h1 id="converted-amount">0.916394 EUR</h1>
-      </div>
+      <button class="btn btn-primary btn-lg btn-block m-5" onclick="convertCurrency()"><i
+          class="fa fa-chevron-right fa-3x"></i></button>
+    </div>
+    <div>
+      <h5 id="start-amount" class="text-center">1 USD =</h5>
+      <h1 id="converted-amount">0.916394 EUR</h1>
     </div>
   </section>
 

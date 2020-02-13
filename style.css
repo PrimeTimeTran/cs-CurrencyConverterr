@@ -20,13 +20,6 @@ section {
   border-radius: 25px;
 }
 
-form {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 footer {
   flex: 1;
 }
@@ -43,6 +36,10 @@ the styles based on the screen size */
 
   form {
     flex-direction: column;
+  }
+
+  .input-form {
+    flex-direction: column !important;
   }
 }
 
