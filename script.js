@@ -43,3 +43,5 @@ function reverse() {
   document.getElementById("from").value = to;
   document.getElementById("to").value = from;
 }
+
+document.getElementById("reverse").addEventListener("click", convertCurrency);
