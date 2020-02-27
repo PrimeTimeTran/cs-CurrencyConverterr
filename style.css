@@ -49,7 +49,7 @@ the styles based on the screen size */
 }
 
 .rainbow-bg{
-  animation: rainbow-bg 2.5s linear;
+  animation: rainbow-bg 30s linear;
   animation-iteration-count: infinite;
 }
 
