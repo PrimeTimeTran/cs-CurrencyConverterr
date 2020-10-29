@@ -11,11 +11,11 @@
 
   <!-- 🔑🔒 Custom CSS -->
   <link rel="stylesheet" href="style.css">
-  
+
   <!-- 🔑🔒 Tab icon & title in browser -->
   <link rel="icon" href="./logo.png">
   <title>World Famous Currency Converter</title>
-  
+
   <!-- 🔑🔒 Define preview image, title, description, and more. -->
   <meta property="og:title" content="International Currency Converter" />
   <meta property="og:description"
@@ -29,19 +29,22 @@
 <body>
   <section class="d-flex flex-column align-items-center justify-content-center">
     <h3 class="align-self-start" id="prompt">The World's Trusted Currency Authority</h3>
-    <div class="d-flex flex-row align-items-center input-form">
-      <input id="amount" />
-      <p class="text-primary font-weight-bold">From:</p>
-      <select id="from" class="btn-primary btn-lg btn-lg">
-        <option value="USD">USD</option>
-        <option value="VND">VND</option>
-      </select>
-      <p class="text-primary font-weight-bold">To:</p>
-      <select id="to" class="btn-primary btn-lg btn-lg">
-        <option value="VND">VND</option>
-      </select>
-      <button class="btn btn-primary btn-lg btn-block m-5"><i class="fa fa-chevron-right fa-3x"></i></button>
-      <div>
+    <div class="input-form">
+      <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+        <input id="amount" />
+        <p class="text-primary font-weight-bold">From:</p>
+        <select id="from" class="btn-primary btn-lg btn-lg">
+          <option value="USD">USD</option>
+          <option value="VND">VND</option>
+        </select>
+        <p class="text-primary font-weight-bold">To:</p>
+        <select id="to" class="btn-primary btn-lg btn-lg">
+          <option value="VND">VND</option>
+        </select>
+        <button class="btn btn-primary btn-lg"><i class="fa fa-chevron-right fa-3x"></i></button>
+        <br />
+      </div>
+      <div class="text-center mt-3">
         <h5 id="start-amount" class="text-center">1 USD =</h5>
         <h1 id="converted-amount">0.916394 EUR</h1>
       </div>

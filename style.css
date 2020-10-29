@@ -13,6 +13,14 @@ section {
   border: 4px solid var(--blue);
 }
 
+p {
+  margin-bottom: 0px;
+}
+
+#amount {
+  width: 50%;
+}
+
 /* 🔑🔒 Here are our media queries which define 
 the styles based on the screen size */
 
@@ -35,5 +43,8 @@ the styles based on the screen size */
 @media only screen and (max-width: 600px) {
   section {
     background-color: blue;
+  }
+  #amount {
+    width: 100%;
   }
 }
