@@ -12,16 +12,14 @@ section {
   display: flex;
   border-radius: 25px;
   border: 3px solid var(--blue);
+  animation: rainbow-bg 30s linear;
+  animation-iteration-count: infinite;
   align-items: center;
   justify-content: space-around;
 }
 
 .amount {
   flex: 0.8;
-}
-
-#amount {
-  flex: 2;
 }
 
 p {
