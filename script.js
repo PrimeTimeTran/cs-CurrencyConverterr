@@ -86,12 +86,14 @@ document.getElementById("amount").addEventListener("keyup", function (e) {
       }
     }
   }
-  if (from === "USD") {
+  const shouldReFormat = e.key === "Enter" || e.key == "Backspace";
+  const isArrowKey = e.key == "ArrowLeft" || e.key == "ArrowRight";
+  if (from === "USD" && !isArrowKey || shouldReFormat) {
     setCaretPosition();
   }
 
-  const shouldReFormat = e.key === "Enter" || e.key == "Backspace";
-  if (shouldReFormat) {
+  
+  if (shouldReFormat || isNumber) {
     convertCurrency();
     const go = formatter.format(value);
     document.getElementById("amount").value = go;
