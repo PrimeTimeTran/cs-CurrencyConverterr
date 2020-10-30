@@ -21,23 +21,28 @@
 <body>
   <section class="d-flex flex-column align-items-center justify-content-center">
     <h3 class="align-self-start" id="prompt">The World's Trusted Currency Authority</h3>
-    <div class="d-flex flex-row align-items-center input-form">
-      <input autofocus type="number" id="amount" />
-      <p class="text-primary font-weight-bold">From:</p>
-      <select id="from" class="btn-primary btn-lg btn-lg">
-        <option value="USD">USD</option>
-        <option value="VND">VND</option>
-      </select>
-      <button id="reverse" class="btn btn-success m-5" onclick="reverse()"><i
-        class="fa fa-sync fa-3x"></i></button>
-      <p class="text-primary font-weight-bold">To:</p>
-      <select id="to" class="btn-primary btn-lg btn-lg">
-        <option value="VND">VND</option>
-        <option value="USD">USD</option>
-      </select>
-
-      <button class="btn btn-primary btn-lg btn-block m-5 rainbow-bg" onclick="convertCurrency()"><i
-          class="fa fa-chevron-right fa-3x"></i></button>
+    <div class="input-form">
+      <div class="d-flex flex-column amount">
+        <h6>Amount</h6>
+        <input autofocus type="number" id="amount" class="text-right px-5" />
+      </div>
+      <div class="d-inline-flex flex-column">
+        <h6>From:</h6>
+        <select id="from" class="btn-primary btn-lg btn-lg">
+          <option value="USD">USD</option>
+          <option value="VND">VND</option>
+        </select>
+      </div>
+      <button id="reverse" class="btn btn-success align-self-end" onclick="reverse()"><i class="fa fa-sync fa-2x"></i></button>
+      <div class="d-inline-flex flex-column">
+        <h6>To:</h6>
+        <select id="to" class="btn-primary btn-lg btn-lg">
+          <option value="VND">VND</option>
+          <option value="USD">USD</option>
+        </select>
+      </div>
+      <button class="btn btn-primary align-self-end rainbow-bg" onclick="convertCurrency()"><i
+          class="fa fa-chevron-right fa-2x"></i></button>
     </div>
     <div>
       <h5 id="start-amount" class="text-center">1 USD =</h5>
