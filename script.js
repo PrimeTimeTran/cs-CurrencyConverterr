@@ -51,15 +51,17 @@ document.getElementById("reverse").addEventListener("click", convertCurrency);
 
 document.getElementById("amount").addEventListener("keyup", function (e) {
   const [from] = getFromTo();
+  const value = e.target.value.split(".")[0].replace(/\D/g, "");
+  const isNumber = isFinite(e.key);
+
   var formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: from,
   });
-  const value = e.target.value.split(".")[0].replace(/\D/g, "");
-  const isNumber = isFinite(e.key);
+
   if (isNumber) {
-    const go = formatter.format(value);
-    document.getElementById("amount").value = go;
+    const newValue = formatter.format(value);
+    document.getElementById("amount").value = newValue;
   }
 
   function setCaretPosition() {
@@ -67,35 +69,40 @@ document.getElementById("amount").addEventListener("keyup", function (e) {
     const la = e.target.value.split(".")[0];
     const caretPos = la.length;
 
+    console.log({ caretPos, el: el, val: el.value });
+
     el.value = el.value;
     if (el !== null) {
       if (el.createTextRange) {
         var range = el.createTextRange();
         range.move("character", caretPos);
         range.select();
-        return true;
+        // return true;
       } else {
         if (el.selectionStart || el.selectionStart === 0) {
           el.focus();
           el.setSelectionRange(caretPos, caretPos);
-          return true;
+          // return true;
         } else {
           el.focus();
-          return false;
+          // return false;
         }
       }
     }
   }
+
   const shouldReFormat = e.key === "Enter" || e.key == "Backspace";
   const isArrowKey = e.key == "ArrowLeft" || e.key == "ArrowRight";
-  if (from === "USD" && !isArrowKey || shouldReFormat) {
-    setCaretPosition();
-  }
 
-  
+  console.log({ from, shouldReFormat });
+
   if (shouldReFormat || isNumber) {
     convertCurrency();
     const go = formatter.format(value);
     document.getElementById("amount").value = go;
+  }
+
+  if ((from === "USD" && !isArrowKey) || (from === "USD" && shouldReFormat)) {
+    setCaretPosition();
   }
 });
