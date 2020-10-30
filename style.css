@@ -11,7 +11,7 @@ section {
   padding: 5%;
   display: flex;
   border-radius: 25px;
-  border: 1px solid var(--blue);
+  border: 3px solid var(--blue);
   align-items: center;
   justify-content: space-around;
 }
