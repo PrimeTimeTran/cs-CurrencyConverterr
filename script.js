@@ -45,6 +45,17 @@ function reverse() {
 
   document.getElementById("from").value = to;
   document.getElementById("to").value = from;
+  var formatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: to,
+  });
+  const val = document
+    .getElementById("amount")
+    .value.split(".")[0]
+    .replace(/\D/g, "");
+  const newValue = formatter.format(val);
+  console.log({val, newValue})
+  document.getElementById("amount").value = newValue;
 }
 
 document.getElementById("reverse").addEventListener("click", convertCurrency);
@@ -69,8 +80,6 @@ document.getElementById("amount").addEventListener("keyup", function (e) {
     const la = e.target.value.split(".")[0];
     const caretPos = la.length;
 
-    console.log({ caretPos, el: el, val: el.value });
-
     el.value = el.value;
     if (el !== null) {
       if (el.createTextRange) {
@@ -93,8 +102,6 @@ document.getElementById("amount").addEventListener("keyup", function (e) {
 
   const shouldReFormat = e.key === "Enter" || e.key == "Backspace";
   const isArrowKey = e.key == "ArrowLeft" || e.key == "ArrowRight";
-
-  console.log({ from, shouldReFormat });
 
   if (shouldReFormat || isNumber) {
     convertCurrency();
