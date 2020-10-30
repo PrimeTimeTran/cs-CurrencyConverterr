@@ -40,6 +40,8 @@ the styles based on the screen size */
 
   .input-form {
     flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -60,8 +62,11 @@ the styles based on the screen size */
   section {
     background-color: blue;
   }
-  #amount {
+  .amount {
     width: 100%;
+  }
+  #amount {
+    text-align: center;
   }
 }
 
